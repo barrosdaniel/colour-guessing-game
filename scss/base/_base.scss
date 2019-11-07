@@ -1,5 +1,8 @@
 body {
-    min-height: 100vh;
-    background: rgb(2,0,36);
-background: linear-gradient(180deg, rgb(2,0,36), rgb(9,9,121));
+  min-height: 100vh;
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 80%);
+  font-family: $font-primary;
+  font-size: 62.5%;
+  color: $colour-white;
 }

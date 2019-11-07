@@ -1,7 +1,10 @@
 body {
   min-height: 100vh;
   background: #020024;
-  background: linear-gradient(180deg, #020024, #090979);
+  background: linear-gradient(180deg, #020024 0%, #090979 80%);
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+  color: #f9f9f9;
 }
 
 /*# sourceMappingURL=styles.css.map */
