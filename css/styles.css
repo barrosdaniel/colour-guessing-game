@@ -1,5 +1,6 @@
-/* Resets
-====================================================================== */
+/* ============================================================
+RESETS
+============================================================ */
 *,
 *::before,
 *::after {
@@ -26,8 +27,27 @@ body {
   overflow-x: hidden;
 }
 
+.container {
+  max-width: 120rem;
+}
+
 ul {
   list-style: none;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.header {
+  margin: 2rem auto 0;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+}
+.header__title {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 100;
 }
 
 /*# sourceMappingURL=styles.css.map */
