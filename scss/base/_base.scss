@@ -16,8 +16,8 @@ html {
 body {
   box-sizing: border-box;
   min-height: 100vh;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 80%);
+  background: $colour-primary-dark;
+  background: linear-gradient(180deg, $colour-primary-dark 0%, $colour-primary 80%);
   font-family: $font-primary;
   color: $colour-white;
   font-weight: 400;

@@ -2,11 +2,40 @@
   margin: 2rem auto 0;
   padding: 3rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   &__title {
     font-family: $font-highlight;
     font-weight: 100;
+    margin-bottom: 4rem;
+  }
+
+  &__menu {
+    display: flex;
+  }
+
+  &__button {
+    width: 25rem;
+    margin: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 2rem 3rem;
+    background-color: $colour-white;
+    color: $colour-primary;
+    font-size: 2rem;
+    font-family: inherit;
+    transition: 0.3s all;
+
+    &:hover {
+      background-color: lighten($colour-primary, 67.5%);
+      cursor: pointer;
+    }
+  }
+
+  &__level-selection {
+    margin-left: 2rem;
   }
 
 }

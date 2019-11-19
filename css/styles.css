@@ -43,11 +43,36 @@ h1 {
   margin: 2rem auto 0;
   padding: 3rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .header__title {
   font-family: "Permanent Marker", cursive;
   font-weight: 100;
+  margin-bottom: 4rem;
+}
+.header__menu {
+  display: flex;
+}
+.header__button {
+  width: 25rem;
+  margin: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 2rem 3rem;
+  background-color: #f9f9f9;
+  color: #090979;
+  font-size: 2rem;
+  font-family: inherit;
+  transition: 0.3s all;
+}
+.header__button:hover {
+  background-color: #dedefd;
+  cursor: pointer;
+}
+.header__level-selection {
+  margin-left: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
