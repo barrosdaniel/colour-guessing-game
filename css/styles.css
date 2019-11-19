@@ -9,6 +9,10 @@ RESETS
   box-sizing: inherit;
 }
 
+*:focus {
+  outline: none;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -71,8 +75,19 @@ h1 {
   background-color: #dedefd;
   cursor: pointer;
 }
+.header__button:hover .header__level-selection {
+  background-color: #dedefd;
+  cursor: pointer;
+}
 .header__level-selection {
-  margin-left: 2rem;
+  margin-left: 1rem;
+  border: none;
+  padding: 1rem;
+  border-bottom: 2px solid #090979;
+  color: #090979;
+  font-size: 2rem;
+  font-family: inherit;
+  transition: 0.3s all;
 }
 
 /*# sourceMappingURL=styles.css.map */
