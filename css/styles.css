@@ -58,6 +58,7 @@ h1 {
 }
 .header__menu {
   display: flex;
+  margin-bottom: 4rem;
 }
 .header__button {
   width: 25rem;
@@ -88,6 +89,14 @@ h1 {
   font-size: 2rem;
   font-family: inherit;
   transition: 0.3s all;
+}
+
+.question {
+  font-family: inherit;
+  font-size: 3rem;
+}
+.question__colour {
+  color: #a2a2f8;
 }
 
 /*# sourceMappingURL=styles.css.map */
