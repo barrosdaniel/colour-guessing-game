@@ -33,6 +33,7 @@ body {
 
 .container {
   max-width: 120rem;
+  margin: 0 auto;
 }
 
 ul {
@@ -54,11 +55,11 @@ h1 {
 .header__title {
   font-family: "Permanent Marker", cursive;
   font-weight: 100;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .header__menu {
   display: flex;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .header__button {
   width: 25rem;
@@ -94,9 +95,29 @@ h1 {
 .question {
   font-family: inherit;
   font-size: 3rem;
+  border-bottom: 4rem;
 }
 .question__colour {
+  margin: 0 1rem;
   color: #a2a2f8;
+  font-style: italic;
+}
+
+.board {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(3, 200px);
+  justify-content: center;
+}
+.board__tile {
+  display: block;
+  width: 180px;
+  height: 180px;
+  background-color: #999;
+  border-radius: 100%;
+}
+.board__tile:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */
