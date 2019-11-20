@@ -2,6 +2,7 @@
 INTERFACE COMPONENTS
 ============================================================ */
 const levelBox = document.querySelector('.header__level-selection');
+const boardBox = document.querySelector('.board');
 
 /* ============================================================
 CONTROLLERS
@@ -19,26 +20,6 @@ levelBox.addEventListener('change', changeLevel);
 /* ============================================================
 GAME LOGIC
 ============================================================ */
-function changeLevel() {
-  level = levelBox.value;
-  if (level === 'easy') {
-    numberOfRows = 1;
-    console.log("Level easy");
-  } else if (level === 'medium') {
-    numberOfRows = 2;
-    console.log("Level medium");
-  } else if (level === 'hard') {
-    numberOfRows = 3;
-    console.log("Level hard");
-  }
-  numberOfCircles = circlesPerLine * numberOfRows;
-  console.log(numberOfCircles);
-}
-
-function renderBoard() {
-  console.log('Initial board rendered');
-}
-
 function generateRandomColourValue() {
   const randomColourValue = Math.floor(Math.random() * Math.floor(256));
   return randomColourValue;
@@ -53,8 +34,37 @@ function generateRandomColour() {
   return randomColour;
 }
 
+function generateCircle() {
+  const circleColour = generateRandomColour();
+  const circleElement = document.createElement('div');
+  circleElement.classList = 'board__tile';
+  circleElement.style.backgroundColor = circleColour;
+  console.log(circleElement);
+  return circleElement;
+}
+
+function changeLevel() {
+  level = levelBox.value;
+  if (level === 'easy') {
+    numberOfRows = 1;
+    console.log("Level easy");
+  } else if (level === 'medium') {
+    numberOfRows = 2;
+    console.log("Level medium");
+  } else if (level === 'hard') {
+    numberOfRows = 3;
+    console.log("Level hard");
+  }
+  numberOfCircles = circlesPerLine * numberOfRows;
+}
+
+function renderBoard() {
+  console.log('Initial board rendered');
+}
+
 renderBoard();
 generateRandomColour();
+generateCircle();
 
 /*
 1 – Render circles as per level selected by user;
