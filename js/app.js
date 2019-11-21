@@ -30,7 +30,6 @@ function generateRandomColour() {
   const green = generateRandomColourValue();
   const blue = generateRandomColourValue();
   let randomColour = `rgb(${red},${green},${blue})`;
-  console.log(randomColour);
   return randomColour;
 }
 
@@ -47,24 +46,24 @@ function changeLevel() {
   level = levelBox.value;
   if (level === 'easy') {
     numberOfRows = 1;
-    console.log("Level easy");
   } else if (level === 'medium') {
     numberOfRows = 2;
-    console.log("Level medium");
   } else if (level === 'hard') {
     numberOfRows = 3;
-    console.log("Level hard");
   }
   numberOfCircles = circlesPerLine * numberOfRows;
+  renderBoard();
 }
 
 function renderBoard() {
-  console.log('Initial board rendered');
+  boardBox.innerHTML = '';
+  for (let i = 0; i < numberOfCircles; i++) {
+    const newCircle = generateCircle();
+    boardBox.appendChild(newCircle);
+  }
 }
 
 renderBoard();
-generateRandomColour();
-generateCircle();
 
 /*
 1 – Render circles as per level selected by user;
