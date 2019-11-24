@@ -3,6 +3,7 @@ INTERFACE COMPONENTS
 ============================================================ */
 const levelBox = document.querySelector('.header__level-selection');
 const boardBox = document.querySelector('.board');
+const questionColour = document.querySelector('.question__colour');
 
 /* ============================================================
 CONTROLLERS
@@ -38,7 +39,6 @@ function generateCircle() {
   const circleElement = document.createElement('div');
   circleElement.classList = 'board__tile';
   circleElement.style.backgroundColor = circleColour;
-  console.log(circleElement);
   return circleElement;
 }
 
@@ -55,28 +55,44 @@ function changeLevel() {
   renderBoard();
 }
 
+function getWinningColour() {
+  const winningCircleIndex = Math.floor(Math.random() * Math.floor(numberOfCircles));
+  const boardTiles = document.querySelectorAll('.board__tile');
+  const winningCircle = boardTiles[winningCircleIndex];
+  const winningColour = winningCircle.style.backgroundColor;
+  console.log(winningCircle);
+  return winningColour;
+}
+
 function renderBoard() {
+  // Render board circles
   boardBox.innerHTML = '';
   for (let i = 0; i < numberOfCircles; i++) {
     const newCircle = generateCircle();
     boardBox.appendChild(newCircle);
   }
+
+  // Update game question
+  const winningColour = getWinningColour();
+  questionColour.textContent = winningColour;
+
+  console.log(winningColour);
 }
 
 renderBoard();
 
 /*
-1 – Render circles as per level selected by user;
+DONE     1 – Render circles as per level selected by user;
 DONE     Grab level selected by user and assign to number of circles variable
-·        Generate number of circles as per number of circles variable
-·        Append circles to board
+DONE     Generate number of circles as per number of circles variable
+DONE     Append circles to board
 
-2 – Assign random colours to rendered circles
-·        Generate random colours
-·        Assign random colours to generated circles
+DONE     2 – Assign random colours to rendered circles
+DONE     Generate random colours
+DONE     Assign random colours to generated circles
 
-3 – Pick winner colour from among the rendered circle colours;
-·         Show in game question
+DONE     3 – Pick winner colour from among the rendered circle colours;
+DONE     Show in game question
 
 4 – Check if clicked colour matches winning colour
 ·         Implement action if there’s a match or if there’s no match
