@@ -80,8 +80,6 @@ function renderBoard() {
   // Update game question
   const winningColour = getWinningColour();
   questionColour.textContent = winningColour;
-
-  console.log(winningColour);
 }
 
 function checkWin(e) {
@@ -107,28 +105,30 @@ renderBoard();
 
 /*
 DONE     1 – Render circles as per level selected by user;
-DONE     Grab level selected by user and assign to number of circles variable
-DONE     Generate number of circles as per number of circles variable
-DONE     Append circles to board
+DONE     1.1 - Grab level selected by user and assign to number of circles variable
+DONE     1.2 - Generate number of circles as per number of circles variable
+DONE     1.3 - Append circles to board
 
 DONE     2 – Assign random colours to rendered circles
-DONE     Generate random colours
-DONE     Assign random colours to generated circles
+DONE     2.1 - Generate random colours
+DONE     2.2 - Assign random colours to generated circles
 
 DONE     3 – Pick winner colour from among the rendered circle colours;
-DONE     Show in game question
+DONE     3.1 - Show in game question
 
 DONE     4 – Check if clicked colour matches winning colour
-DONE     Implement alerts if there’s a match or if there’s no match
+DONE     4.1 - Implement alerts if there’s a match or if there’s no match
 DONE     4.2 - Hide clicked circle if colour don't match
 
-DONE     Enter functionality for exit button
+DONE     5 - Enter functionality for exit button
 
-6 – Enter functionality for start / reset button
+DONE     6 - Enter functionality for start / reset button
 
 DONE     Enter functionality for level button
 
-8 - Add attempts check to game 
+8 - Add attempts check to game
+8.1 - Add attempts text
+8.2 - Add attempts functionality 
 
 9 - Add modal window for the win message 
 

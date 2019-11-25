@@ -95,10 +95,21 @@ h1 {
 .question {
   font-family: inherit;
   font-size: 3rem;
-  border-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 .question__colour {
   margin: 0 1rem;
+  color: #a2a2f8;
+  font-style: italic;
+}
+
+.attempts {
+  font-family: inherit;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.attempts__number {
+  margin: 0 0.5rem;
   color: #a2a2f8;
   font-style: italic;
 }
