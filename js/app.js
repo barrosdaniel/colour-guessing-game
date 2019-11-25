@@ -86,13 +86,15 @@ function renderBoard() {
 
 function checkWin(e) {
   if (e.target.classList[0] === 'board__tile') {
-    const clickedCircleColour = e.target.style.backgroundColor;
+    const clickedCircle = e.target;
+    const clickedCircleColour = clickedCircle.style.backgroundColor;
 
     if (clickedCircleColour === questionColour.textContent) {
       alert(`You guessed the colour correctly! Click 'OK' to play again.`);
       renderBoard();
     } else {
       alert('You guessed the colour incorrectly and lost one attempt.');
+      clickedCircle.style.visibility = 'hidden';
     }
   }
 }
@@ -117,7 +119,8 @@ DONE     3 – Pick winner colour from among the rendered circle colours;
 DONE     Show in game question
 
 DONE     4 – Check if clicked colour matches winning colour
-HOME     Implement alerts if there’s a match or if there’s no match
+DONE     Implement alerts if there’s a match or if there’s no match
+DONE     4.2 - Hide clicked circle if colour don't match
 
 DONE     Enter functionality for exit button
 
