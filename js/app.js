@@ -5,6 +5,7 @@ const levelBox = document.querySelector('.header__level-selection');
 const boardBox = document.querySelector('.board');
 const questionColour = document.querySelector('.question__colour');
 const resetButton = document.querySelector('.header__button--reset');
+const exitButton = document.querySelector('.header__button--exit');
 
 /* ============================================================
 CONTROLLERS
@@ -19,7 +20,8 @@ EVENT LISTENERS
 ============================================================ */
 levelBox.addEventListener('change', changeLevel);
 boardBox.addEventListener('click', checkWin);
-resetButton.addEventListener('click', exit);
+resetButton.addEventListener('click', renderBoard);
+exitButton.addEventListener('click', exit);
 
 /* ============================================================
 GAME LOGIC
@@ -121,5 +123,18 @@ DONE     Enter functionality for exit button
 
 6 – Enter functionality for start / reset button
 
-7 – Enter functionality for level button
+DONE     Enter functionality for level button
+
+8 - Add attempts check to game 
+
+9 - Add modal window for the win message 
+
+10 - Add modal window for the lose message
+10.1 - Implement logic for attempts remaining
+10.2 - Implement logic for no attempts game over
+
+11 - Implement total session points
+11.1 - Add points box
+11.2 - Add points calculation to points window
+first attempt 
 */
