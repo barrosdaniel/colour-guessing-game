@@ -4,6 +4,7 @@ INTERFACE COMPONENTS
 const levelBox = document.querySelector('.header__level-selection');
 const boardBox = document.querySelector('.board');
 const questionColour = document.querySelector('.question__colour');
+const resetButton = document.querySelector('.header__button--reset');
 
 /* ============================================================
 CONTROLLERS
@@ -18,6 +19,7 @@ EVENT LISTENERS
 ============================================================ */
 levelBox.addEventListener('change', changeLevel);
 boardBox.addEventListener('click', checkWin);
+resetButton.addEventListener('click', exit);
 
 /* ============================================================
 GAME LOGIC
@@ -83,14 +85,18 @@ function renderBoard() {
 function checkWin(e) {
   if (e.target.classList[0] === 'board__tile') {
     const clickedCircleColour = e.target.style.backgroundColor;
-    console.log(clickedCircleColour);
 
     if (clickedCircleColour === questionColour.textContent) {
-      console.log('This is a win!');
+      alert(`You guessed the colour correctly! Click 'OK' to play again.`);
+      renderBoard();
     } else {
-      console.log('This is not a win.');
+      alert('You guessed the colour incorrectly and lost one attempt.');
     }
   }
+}
+
+function exit() {
+  window.close();
 }
 
 renderBoard();
@@ -108,10 +114,10 @@ DONE     Assign random colours to generated circles
 DONE     3 – Pick winner colour from among the rendered circle colours;
 DONE     Show in game question
 
-4 – Check if clicked colour matches winning colour
-·         Implement action if there’s a match or if there’s no match
+DONE     4 – Check if clicked colour matches winning colour
+HOME     Implement alerts if there’s a match or if there’s no match
 
-5 – Enter functionality for exit button
+DONE     Enter functionality for exit button
 
 6 – Enter functionality for start / reset button
 
