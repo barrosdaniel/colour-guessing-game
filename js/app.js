@@ -17,6 +17,7 @@ let numberOfCircles = circlesPerLine * numberOfRows;
 EVENT LISTENERS
 ============================================================ */
 levelBox.addEventListener('change', changeLevel);
+boardBox.addEventListener('click', checkWin);
 
 /* ============================================================
 GAME LOGIC
@@ -77,6 +78,19 @@ function renderBoard() {
   questionColour.textContent = winningColour;
 
   console.log(winningColour);
+}
+
+function checkWin(e) {
+  if (e.target.classList[0] === 'board__tile') {
+    const clickedCircleColour = e.target.style.backgroundColor;
+    console.log(clickedCircleColour);
+
+    if (clickedCircleColour === questionColour.textContent) {
+      console.log('This is a win!');
+    } else {
+      console.log('This is not a win.');
+    }
+  }
 }
 
 renderBoard();
