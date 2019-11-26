@@ -2,10 +2,14 @@
 INTERFACE COMPONENTS
 ============================================================ */
 const levelBox = document.querySelector('.header__level-selection');
-const boardBox = document.querySelector('.board');
-const questionColour = document.querySelector('.question__colour');
+const header = document.querySelector('.header');
 const resetButton = document.querySelector('.header__button--reset');
 const exitButton = document.querySelector('.header__button--exit');
+const questionColour = document.querySelector('.question__colour');
+const attemptsNumberPhrase = document.querySelector('.attempts');
+const attemptsNumber = document.querySelector('.attempts__number');
+const attemptsPlural = document.querySelector('.attempts__plural');
+const boardBox = document.querySelector('.board');
 
 /* ============================================================
 CONTROLLERS
@@ -14,6 +18,7 @@ let level = levelBox.value;
 const circlesPerLine = 3
 let numberOfRows = 1
 let numberOfCircles = circlesPerLine * numberOfRows;
+let attempts = 3;
 
 /* ============================================================
 EVENT LISTENERS
@@ -77,9 +82,14 @@ function renderBoard() {
     boardBox.appendChild(newCircle);
   }
 
-  // Update game question
+  // Reset game question
   const winningColour = getWinningColour();
   questionColour.textContent = winningColour;
+
+  // Reset attempts left
+  attempts = 3;
+  attemptsNumber.textContent = attempts;
+  attemptsPlural.style.display = 'inline';
 }
 
 function checkWin(e) {
@@ -91,8 +101,18 @@ function checkWin(e) {
       alert(`You guessed the colour correctly! Click 'OK' to play again.`);
       renderBoard();
     } else {
-      alert('You guessed the colour incorrectly and lost one attempt.');
+      attempts -= 1;
+      if (attempts === 1) {
+        attemptsPlural.style.display = 'none';
+      }
+      attemptsNumber.textContent = attempts;
       clickedCircle.style.visibility = 'hidden';
+      if (attempts === 0) {
+        alert('GAME OVER. You did not guess the correct colour.');
+        renderBoard();
+      } else if (attempts > 0) {
+        alert('You guessed the colour incorrectly and lost one attempt.');
+      }
     }
   }
 }
@@ -124,11 +144,12 @@ DONE     5 - Enter functionality for exit button
 
 DONE     6 - Enter functionality for start / reset button
 
-DONE     Enter functionality for level button
+DONE     7 - Enter functionality for level button
 
-8 - Add attempts check to game
-8.1 - Add attempts text
-8.2 - Add attempts functionality 
+DONE     8 - Add attempts check to game
+DONE     8.1 - Add attempts text
+DONE     8.2 - Add attempts functionality
+8.3 - Add functionality to update attempts text on one attempt(s)
 
 9 - Add modal window for the win message 
 
