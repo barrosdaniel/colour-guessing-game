@@ -1,0 +1,64 @@
+.modal {
+  background-color: $colour-overlay;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  &__box {
+    background-color: $colour-white;
+    padding: 4rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+
+  &__heading,
+  &__question {
+    color: $colour-black;
+    margin-bottom: 2rem;
+  }
+
+  &__heading {
+    font-size: 3rem;
+  }
+
+  &__question {
+    font-size: 2.25rem;
+  }
+
+  &__button {
+    width: 30%;
+    margin-top: 2rem;
+    border: none;
+    padding: 1rem 2rem;
+    background-color: $colour-primary;
+    color: $colour-white;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s all;
+
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+
+    &:hover {
+      background-color: $colour-primary-light;
+      color: $colour-primary;
+    }
+
+    &--reset {
+      background-color: $colour-secondary;
+
+      &:hover {
+        background-color: $colour-secondary-light;
+        color: $colour-secondary;
+      }
+    }
+
+
+  }
+}

@@ -10,9 +10,14 @@ cursive;
 // COLOR VARIABLES
 // ========================================
 $colour-white: #f9f9f9;
+$colour-black: #111;
 $colour-gray: #999;
+$colour-overlay: rgba(0, 0, 0, 0.8);
 
 $colour-primary-dark: rgb(2, 0, 36);
 $colour-primary:rgb(9, 9, 121);
 $colour-primary-light: lighten($colour-primary, 55%);
 $colour-primary-ultra-light: lighten($colour-primary, 67.5%);
+
+$colour-secondary: rgb(9, 121, 9);
+$colour-secondary-light: lighten($colour-secondary, 55%);

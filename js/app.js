@@ -10,6 +10,7 @@ const attemptsNumberPhrase = document.querySelector('.attempts');
 const attemptsNumber = document.querySelector('.attempts__number');
 const attemptsPlural = document.querySelector('.attempts__plural');
 const boardBox = document.querySelector('.board');
+const modalWin = document.querySelector('.modal__win');
 
 /* ============================================================
 CONTROLLERS
@@ -92,14 +93,16 @@ function renderBoard() {
   attemptsPlural.style.display = 'inline';
 }
 
+function processWin() {
+  modalWin.style.display = 'flex';
+}
+
 function checkWin(e) {
   if (e.target.classList[0] === 'board__tile') {
     const clickedCircle = e.target;
     const clickedCircleColour = clickedCircle.style.backgroundColor;
-
     if (clickedCircleColour === questionColour.textContent) {
-      alert(`You guessed the colour correctly! Click 'OK' to play again.`);
-      renderBoard();
+      processWin();
     } else {
       attempts -= 1;
       if (attempts === 1) {
@@ -149,7 +152,7 @@ DONE     7 - Enter functionality for level button
 DONE     8 - Add attempts check to game
 DONE     8.1 - Add attempts text
 DONE     8.2 - Add attempts functionality
-8.3 - Add functionality to update attempts text on one attempt(s)
+DONE     8.3 - Add functionality to update attempts text on one attempt(s)
 
 9 - Add modal window for the win message 
 
