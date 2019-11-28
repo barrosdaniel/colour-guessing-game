@@ -10,7 +10,10 @@ const attemptsNumberPhrase = document.querySelector('.attempts');
 const attemptsNumber = document.querySelector('.attempts__number');
 const attemptsPlural = document.querySelector('.attempts__plural');
 const boardBox = document.querySelector('.board');
+const modal = document.querySelector('.modal');
 const modalWin = document.querySelector('.modal__win');
+const modalButtonReset = document.querySelector('.modal__button--reset');
+const modalButtonExit = document.querySelector('.modal__button--exit');
 
 /* ============================================================
 CONTROLLERS
@@ -27,7 +30,9 @@ EVENT LISTENERS
 levelBox.addEventListener('change', changeLevel);
 boardBox.addEventListener('click', checkWin);
 resetButton.addEventListener('click', renderBoard);
+modalButtonReset.addEventListener('click', renderBoard);
 exitButton.addEventListener('click', exit);
+modalButtonExit.addEventListener('click', exit);
 
 /* ============================================================
 GAME LOGIC
@@ -76,6 +81,9 @@ function getWinningColour() {
 }
 
 function renderBoard() {
+  // Hide modals
+  modal.style.display = 'none';
+
   // Render board circles
   boardBox.innerHTML = '';
   for (let i = 0; i < numberOfCircles; i++) {
@@ -155,6 +163,8 @@ DONE     8.2 - Add attempts functionality
 DONE     8.3 - Add functionality to update attempts text on one attempt(s)
 
 9 - Add modal window for the win message 
+DONE     9.1 - Add modal window html and styling
+9.2 - Add functionality to win modal buttons
 
 10 - Add modal window for the lose message
 10.1 - Implement logic for attempts remaining
