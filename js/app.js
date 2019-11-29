@@ -10,10 +10,12 @@ const attemptsNumberPhrase = document.querySelector('.attempts');
 const attemptsNumber = document.querySelector('.attempts__number');
 const attemptsPlural = document.querySelector('.attempts__plural');
 const boardBox = document.querySelector('.board');
-const modal = document.querySelector('.modal');
+const modals = document.querySelectorAll('.modal');
 const modalWin = document.querySelector('.modal__win');
+const modalIncorrect = document.querySelector('.modal__incorrect');
 const modalButtonReset = document.querySelector('.modal__button--reset');
 const modalButtonExit = document.querySelector('.modal__button--exit');
+const modalButtonContinue = document.querySelector('.modal__button--continue');
 
 /* ============================================================
 CONTROLLERS
@@ -33,6 +35,7 @@ resetButton.addEventListener('click', renderBoard);
 modalButtonReset.addEventListener('click', renderBoard);
 exitButton.addEventListener('click', exit);
 modalButtonExit.addEventListener('click', exit);
+modalButtonContinue.addEventListener('click', hideModals);
 
 /* ============================================================
 GAME LOGIC
@@ -80,10 +83,14 @@ function getWinningColour() {
   return winningColour;
 }
 
-function renderBoard() {
-  // Hide modals
-  modal.style.display = 'none';
+function hideModals() {
+  modals.forEach((modal) => {
+    modal.style.display = 'none';
+  })
+}
 
+function renderBoard() {
+  hideModals();
   // Render board circles
   boardBox.innerHTML = '';
   for (let i = 0; i < numberOfCircles; i++) {
@@ -122,7 +129,7 @@ function checkWin(e) {
         alert('GAME OVER. You did not guess the correct colour.');
         renderBoard();
       } else if (attempts > 0) {
-        alert('You guessed the colour incorrectly and lost one attempt.');
+        modalIncorrect.style.display = 'flex';
       }
     }
   }
@@ -162,16 +169,19 @@ DONE     8.1 - Add attempts text
 DONE     8.2 - Add attempts functionality
 DONE     8.3 - Add functionality to update attempts text on one attempt(s)
 
-9 - Add modal window for the win message 
+DONE     9 - Add modal window for the win message 
 DONE     9.1 - Add modal window html and styling
-9.2 - Add functionality to win modal buttons
+DONE     9.2 - Add functionality to win modal buttons
 
-10 - Add modal window for the lose message
-10.1 - Implement logic for attempts remaining
-10.2 - Implement logic for no attempts game over
+10 - Add modal window for the incorrect message
+10.1 - Add modal window
+10.2 - Add Continue button functionality
 
 11 - Implement total session points
 11.1 - Add points box
 11.2 - Add points calculation to points window
 first attempt 
+
+12 - Add modal window for the lose message
+12.1 - Implement logic for no attempts game over
 */
