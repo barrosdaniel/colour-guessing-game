@@ -91,6 +91,7 @@ function hideModals() {
 
 function renderBoard() {
   hideModals();
+
   // Render board circles
   boardBox.innerHTML = '';
   for (let i = 0; i < numberOfCircles; i++) {
