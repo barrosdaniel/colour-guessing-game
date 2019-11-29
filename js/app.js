@@ -173,9 +173,9 @@ DONE     9 - Add modal window for the win message
 DONE     9.1 - Add modal window html and styling
 DONE     9.2 - Add functionality to win modal buttons
 
-10 - Add modal window for the incorrect message
-10.1 - Add modal window
-10.2 - Add Continue button functionality
+DONE     10 - Add modal window for the incorrect message
+DONE     10.1 - Add modal window
+DONE     10.2 - Add Continue button functionality
 
 11 - Implement total session points
 11.1 - Add points box
