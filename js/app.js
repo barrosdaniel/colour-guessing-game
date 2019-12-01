@@ -12,9 +12,13 @@ const attemptsPlural = document.querySelector('.attempts__plural');
 const boardBox = document.querySelector('.board');
 const modals = document.querySelectorAll('.modal');
 const modalWin = document.querySelector('.modal__win');
+const modalWinButtonReset = document.querySelector('.modal__win .modal__button--reset');
+const modalWinButtonExit = document.querySelector('.modal__win .modal__button--exit');
 const modalIncorrect = document.querySelector('.modal__incorrect');
-const modalButtonReset = document.querySelector('.modal__button--reset');
-const modalButtonExit = document.querySelector('.modal__button--exit');
+const modalIncorrectButtonContinue = document.querySelector('.modal__incorrect .modal__button--continue');
+const modalLose = document.querySelector('.modal__lose');
+const modalLoseButtonReset = document.querySelector('.modal__lose .modal__button--reset');
+const modalLoseButtonExit = document.querySelector('.modal__lose .modal__button--exit');
 const modalButtonContinue = document.querySelector('.modal__button--continue');
 
 /* ============================================================
@@ -32,10 +36,12 @@ EVENT LISTENERS
 levelBox.addEventListener('change', changeLevel);
 boardBox.addEventListener('click', checkWin);
 resetButton.addEventListener('click', renderBoard);
-modalButtonReset.addEventListener('click', renderBoard);
 exitButton.addEventListener('click', exit);
-modalButtonExit.addEventListener('click', exit);
-modalButtonContinue.addEventListener('click', hideModals);
+modalWinButtonReset.addEventListener('click', renderBoard);
+modalWinButtonExit.addEventListener('click', exit);
+modalIncorrectButtonContinue.addEventListener('click', hideModals);
+modalLoseButtonReset.addEventListener('click', renderBoard);
+modalLoseButtonExit.addEventListener('click', exit);
 
 /* ============================================================
 GAME LOGIC
@@ -127,8 +133,7 @@ function checkWin(e) {
       attemptsNumber.textContent = attempts;
       clickedCircle.style.visibility = 'hidden';
       if (attempts === 0) {
-        alert('GAME OVER. You did not guess the correct colour.');
-        renderBoard();
+        modalLose.style.display = 'flex';
       } else if (attempts > 0) {
         modalIncorrect.style.display = 'flex';
       }
@@ -183,6 +188,6 @@ DONE     10.2 - Add Continue button functionality
 11.2 - Add points calculation to points window
 first attempt 
 
-12 - Add modal window for the lose message
-12.1 - Implement logic for no attempts game over
+DONE     12 - Add modal window for the lose message
+DONE     12.1 - Implement logic for no attempts game over
 */
