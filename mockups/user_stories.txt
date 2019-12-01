@@ -1,0 +1,42 @@
+DONE     1 – Render circles as per level selected by user;
+DONE     1.1 - Grab level selected by user and assign to number of circles variable
+DONE     1.2 - Generate number of circles as per number of circles variable
+DONE     1.3 - Append circles to board
+
+DONE     2 – Assign random colours to rendered circles
+DONE     2.1 - Generate random colours
+DONE     2.2 - Assign random colours to generated circles
+
+DONE     3 – Pick winner colour from among the rendered circle colours;
+DONE     3.1 - Show in game question
+
+DONE     4 – Check if clicked colour matches winning colour
+DONE     4.1 - Implement alerts if there’s a match or if there’s no match
+DONE     4.2 - Hide clicked circle if colour don't match
+
+DONE     5 - Enter functionality for exit button
+
+DONE     6 - Enter functionality for start / reset button
+
+DONE     7 - Enter functionality for level button
+
+DONE     8 - Add attempts check to game
+DONE     8.1 - Add attempts text
+DONE     8.2 - Add attempts functionality
+DONE     8.3 - Add functionality to update attempts text on one attempt(s)
+
+DONE     9 - Add modal window for the win message 
+DONE     9.1 - Add modal window html and styling
+DONE     9.2 - Add functionality to win modal buttons
+
+DONE     10 - Add modal window for the incorrect message
+DONE     10.1 - Add modal window
+DONE     10.2 - Add Continue button functionality
+
+11 - Implement total session points
+11.1 - Add points box
+11.2 - Add points calculation to points window
+first attempt 
+
+DONE     12 - Add modal window for the lose message
+DONE     12.1 - Implement logic for no attempts game over
