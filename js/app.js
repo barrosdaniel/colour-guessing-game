@@ -92,7 +92,7 @@ function getWinningColour() {
 function hideModals() {
   modals.forEach((modal) => {
     modal.style.display = 'none';
-  })
+  });
 }
 
 function renderBoard() {
