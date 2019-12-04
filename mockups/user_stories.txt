@@ -42,7 +42,7 @@ DONE     12 - Add modal window for the lose message
 DONE     12.1 - Implement logic for no attempts game over
 
 13 - Make game site responsive
-13.1 - Extra small screen design
+DONE 13.1 - Extra small screen design
 13.2 - Small screen design
 13.3 - Medium screen design
 13.4 - Large screen design

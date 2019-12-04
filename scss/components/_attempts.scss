@@ -3,6 +3,10 @@
   font-size: 1.5rem;
   margin-bottom: 2rem;
 
+  @include mq('sm') {
+    font-size: 1.75rem;
+  }
+
   &__number {
     margin: 0 0.25rem;
     color: $colour-primary-light;

@@ -9,12 +9,18 @@
   justify-content: center;
   align-items: center;
 
+
   &__box {
     width: 90%;
     background-color: $colour-white;
     padding: 1rem;
     border-radius: 0.5rem;
     text-align: center;
+
+    @include mq('sm') {
+      width: 75%;
+      padding: 2rem;
+    }
   }
 
   &__heading,
@@ -25,10 +31,18 @@
 
   &__heading {
     font-size: 1.75rem;
+
+    @include mq('sm') {
+      font-size: 2rem;
+    }
   }
 
   &__question {
     font-size: 1.5rem;
+
+    @include mq('sm') {
+      font-size: 1.75rem;
+    }
   }
 
   &__button {
@@ -42,6 +56,10 @@
     border-radius: 0.5rem;
     cursor: pointer;
     transition: 0.3s all;
+
+    @include mq('sm') {
+      font-size: 1.5rem;
+    }
 
     &:not(:last-child) {
       margin-right: 4rem;
