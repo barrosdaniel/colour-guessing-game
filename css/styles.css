@@ -232,9 +232,20 @@ h1 {
     padding: 2rem;
   }
 }
+@media (min-width: 768px) {
+  .modal__box {
+    width: 70%;
+    padding: 2.5rem;
+  }
+}
 .modal__heading, .modal__question {
   color: #111;
   margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .modal__heading, .modal__question {
+    margin-bottom: 1.5rem;
+  }
 }
 .modal__heading {
   font-size: 1.75rem;
@@ -244,12 +255,22 @@ h1 {
     font-size: 2rem;
   }
 }
+@media (min-width: 768px) {
+  .modal__heading {
+    font-size: 2.5rem;
+  }
+}
 .modal__question {
   font-size: 1.5rem;
 }
 @media (min-width: 576px) {
   .modal__question {
     font-size: 1.75rem;
+  }
+}
+@media (min-width: 576px) {
+  .modal__question {
+    font-size: 2rem;
   }
 }
 .modal__button {
@@ -267,6 +288,12 @@ h1 {
 @media (min-width: 576px) {
   .modal__button {
     font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .modal__button {
+    font-size: 1.75rem;
+    padding: 1rem 2rem;
   }
 }
 .modal__button:not(:last-child) {
