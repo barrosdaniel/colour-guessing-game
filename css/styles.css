@@ -65,6 +65,12 @@ h1 {
     font-size: 3rem;
   }
 }
+@media (min-width: 768px) {
+  .header__title {
+    margin: 1rem auto 2rem;
+    font-size: 4rem;
+  }
+}
 .header__menu {
   display: flex;
   flex-direction: column;
@@ -91,6 +97,13 @@ h1 {
     font-size: 1.75rem;
   }
 }
+@media (min-width: 768px) {
+  .header__button {
+    height: 6.8rem;
+    padding: 1.75rem 2rem;
+    font-size: 2rem;
+  }
+}
 .header__button:hover {
   background-color: #dedefd;
   cursor: pointer;
@@ -114,6 +127,11 @@ h1 {
     font-size: 1.75rem;
   }
 }
+@media (min-width: 768px) {
+  .header__level-selection {
+    font-size: 2rem;
+  }
+}
 
 .question {
   font-family: inherit;
@@ -123,6 +141,11 @@ h1 {
 @media (min-width: 576px) {
   .question {
     font-size: 1.75rem;
+  }
+}
+@media (min-width: 768px) {
+  .question {
+    font-size: 2rem;
   }
 }
 .question__colour {
@@ -139,6 +162,11 @@ h1 {
 @media (min-width: 576px) {
   .attempts {
     font-size: 1.75rem;
+  }
+}
+@media (min-width: 768px) {
+  .attempts {
+    font-size: 2rem;
   }
 }
 .attempts__number {
@@ -159,6 +187,13 @@ h1 {
     grid-gap: 2rem;
     grid-template-columns: repeat(4, 80px);
     grid-template-rows: repeat(4, 80px);
+  }
+}
+@media (min-width: 768px) {
+  .board {
+    grid-gap: 3rem;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
   }
 }
 .board__tile {
