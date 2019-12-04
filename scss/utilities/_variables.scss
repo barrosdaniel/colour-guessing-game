@@ -21,3 +21,12 @@ $colour-primary-ultra-light: lighten($colour-primary, 67.5%);
 
 $colour-secondary: rgb(9, 121, 9);
 $colour-secondary-light: lighten($colour-secondary, 55%);
+
+// ========================================
+// BREAK POINTS
+// ========================================
+$break-xs: 575px;
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: 1024px;
+$break-xl: 1200px;

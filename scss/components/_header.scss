@@ -1,31 +1,48 @@
 .header {
-  margin: 2rem auto 0;
-  padding: 3rem;
+  margin: 1rem auto;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  // @include mq('sm') {
+  //   margin: 2rem auto 0;
+  // }
+
   &__title {
+    margin-bottom: 1rem;
     font-family: $font-highlight;
+    font-size: 3rem;
     font-weight: 100;
-    margin-bottom: 3rem;
+    text-align: center;
+
+    @include mq('sm') {
+      margin: 2rem auto 0;
+    }
   }
 
   &__menu {
     display: flex;
+    flex-direction: column;
     margin-bottom: 3rem;
+
+    @include mq('md') {
+      flex-direction: column;
+    }
   }
 
   &__button {
     width: 25rem;
-    margin: 2rem;
+    height: 4.7rem;
+    margin: 1rem;
     border: none;
     border-radius: 0.5rem;
-    padding: 2rem 3rem;
+    padding: 1rem 1.5rem;
     background-color: $colour-white;
     color: $colour-primary;
-    font-size: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
     font-family: inherit;
     transition: 0.3s all;
 
@@ -43,10 +60,10 @@
   &__level-selection {
     margin-left: 1rem;
     border: none;
-    padding: 1rem;
+    padding: 0.25rem;
     border-bottom: 2px solid $colour-primary;
     color: $colour-primary;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: inherit;
     transition: 0.3s all;
   }
