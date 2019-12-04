@@ -44,6 +44,8 @@ DONE     12.1 - Implement logic for no attempts game over
 13 - Make game site responsive
 DONE     13.1 - Extra small screen design
 DONE     13.2 - Small screen design
-13.3 - Medium screen design
+DONE     13.3 - Medium screen design
 13.4 - Large screen design
 13.5 - Extra large screen design
+
+14 - Include Google Analytics token 
