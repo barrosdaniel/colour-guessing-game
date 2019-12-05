@@ -27,6 +27,11 @@
       margin: 1.5rem auto 3rem;
       font-size: 5rem;
     }
+
+    @include mq('xl') {
+      margin: 2rem auto 4rem;
+      font-size: 6rem;
+    }
   }
 
   &__menu {

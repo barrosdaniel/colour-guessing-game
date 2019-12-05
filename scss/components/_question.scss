@@ -15,6 +15,10 @@
     font-size: 2.5rem;
   }
 
+  @include mq('xl') {
+    font-size: 3rem;
+  }
+
   &__colour {
     margin: 0 0.25rem;
     color: $colour-primary-light;
