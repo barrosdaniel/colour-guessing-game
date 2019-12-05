@@ -22,13 +22,21 @@
       margin: 1rem auto 2rem;
       font-size: 4rem;
     }
+
+    @include mq('lg') {
+      margin: 1.5rem auto 3rem;
+      font-size: 5rem;
+    }
   }
 
   &__menu {
     display: flex;
     flex-direction: column;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
 
+    @include mq('lg') {
+      flex-direction: row;
+    }
   }
 
   &__button {

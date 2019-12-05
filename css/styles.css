@@ -71,10 +71,21 @@ h1 {
     font-size: 4rem;
   }
 }
+@media (min-width: 1024px) {
+  .header__title {
+    margin: 1.5rem auto 3rem;
+    font-size: 5rem;
+  }
+}
 .header__menu {
   display: flex;
   flex-direction: column;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
+}
+@media (min-width: 1024px) {
+  .header__menu {
+    flex-direction: row;
+  }
 }
 .header__button {
   width: 25rem;
@@ -148,6 +159,11 @@ h1 {
     font-size: 2rem;
   }
 }
+@media (min-width: 1024px) {
+  .question {
+    font-size: 2.5rem;
+  }
+}
 .question__colour {
   margin: 0 0.25rem;
   color: #a2a2f8;
@@ -167,6 +183,11 @@ h1 {
 @media (min-width: 768px) {
   .attempts {
     font-size: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .attempts {
+    font-size: 2.5rem;
   }
 }
 .attempts__number {
@@ -194,6 +215,13 @@ h1 {
     grid-gap: 3rem;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(4, 100px);
+  }
+}
+@media (min-width: 1024px) {
+  .board {
+    grid-gap: 4rem;
+    grid-template-columns: repeat(4, 130px);
+    grid-template-rows: repeat(4, 130px);
   }
 }
 .board__tile {
@@ -238,6 +266,12 @@ h1 {
     padding: 2.5rem;
   }
 }
+@media (min-width: 1024px) {
+  .modal__box {
+    width: 60%;
+    padding: 3.25rem;
+  }
+}
 .modal__heading, .modal__question {
   color: #111;
   margin-bottom: 1rem;
@@ -245,6 +279,11 @@ h1 {
 @media (min-width: 768px) {
   .modal__heading, .modal__question {
     margin-bottom: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .modal__heading, .modal__question {
+    margin-bottom: 2rem;
   }
 }
 .modal__heading {
@@ -260,6 +299,11 @@ h1 {
     font-size: 2.5rem;
   }
 }
+@media (min-width: 1024px) {
+  .modal__heading {
+    font-size: 3rem;
+  }
+}
 .modal__question {
   font-size: 1.5rem;
 }
@@ -268,9 +312,14 @@ h1 {
     font-size: 1.75rem;
   }
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .modal__question {
     font-size: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .modal__question {
+    font-size: 2.5rem;
   }
 }
 .modal__button {
@@ -294,6 +343,12 @@ h1 {
   .modal__button {
     font-size: 1.75rem;
     padding: 1rem 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .modal__button {
+    font-size: 2rem;
+    padding: 1.25rem 2.5rem;
   }
 }
 .modal__button:not(:last-child) {
